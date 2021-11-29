@@ -10,6 +10,9 @@
     <!-- Application Configuration -->
     <?php require_once (dirname(__FILE__) . '\..\..\config\app.php'); ?>
 
+    <!-- Helper -->
+    <?php require_once (constant("ROOTPATH") . '\components\helper.php'); ?>
+
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/main.css' ?>">
 
