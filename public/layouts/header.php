@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="application-name" content="MySaf Reservation">
+    <meta name="description" content="A web-based application that is focus on management of mosque congregation during pandemic COVID-19">
+    <meta name="author" content="Ameerul Zaki, Mohd Asyraf, Abu Dzar">
+    <meta name="keywords" content="MySaf, Reservation, Mosque, Congregation, Pandemic, COVID-19">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>MySaf Reservation</title>
