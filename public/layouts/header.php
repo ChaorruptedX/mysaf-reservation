@@ -15,6 +15,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/main.css' ?>">
+    <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/nav.css' ?>">
 
     <!-- Scripts -->
     <script src="<?= constant("BASEURL") . 'assets/js/main.js' ?>"></script>
@@ -23,6 +24,10 @@
 
 <?php require_once (constant("ROOTPATH") . '\config\database.php'); ?>
 
-<?php require_once (constant("ROOTPATH") . '\public\layouts\navigation\nav-guest.php'); ?>
+<?php require_once (constant("ROOTPATH") . '\public\layouts\navigation\nav-guest.php'); $side_nav_content = false; ?>
 
-<div id="content">
+<?php // require_once (constant("ROOTPATH") . '\public\layouts\navigation\nav-user.php'); $side_nav_content = false; ?>
+
+<?php // require_once (constant("ROOTPATH") . '\public\layouts\navigation\nav-committee.php'); $side_nav_content = true; ?>
+
+<div class="<?= ($side_nav_content) ? "side-nav-" : null; ?>content">
