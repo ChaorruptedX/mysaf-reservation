@@ -1,6 +1,14 @@
 <?php
 
     /**
+     * bcrypt Algorithm for Password Hashing
+     */
+    function bcrypt_hash($password)
+    {
+        return password_hash($password, PASSWORD_BCRYPT);
+    }
+
+    /**
      * Debug function
      * d($var);
      */
