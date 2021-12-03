@@ -20,6 +20,7 @@
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/main.css' ?>">
     <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/nav.css' ?>">
+    <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/login.css' ?>">
 
     <!-- Scripts -->
     <script src="<?= constant("BASEURL") . 'assets/js/main.js' ?>"></script>
