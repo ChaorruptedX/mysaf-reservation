@@ -1,3 +1,15 @@
+<!-- Application Configuration -->
+<?php require_once (dirname(__FILE__) . '\..\..\config\app.php'); ?>
+
+<!-- Helper -->
+<?php require_once (constant("ROOTPATH") . '\components\helper.php'); ?>
+
+<!-- Database Connection -->
+<?php require_once (constant("ROOTPATH") . '\config\database.php'); ?>
+
+<!-- Session -->
+<?php // require_once (constant("ROOTPATH") . '\components\session.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +23,6 @@
 
     <title>MySaf Reservation</title>
 
-    <!-- Application Configuration -->
-    <?php require_once (dirname(__FILE__) . '\..\..\config\app.php'); ?>
-
-    <!-- Helper -->
-    <?php require_once (constant("ROOTPATH") . '\components\helper.php'); ?>
-
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/main.css' ?>">
     <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/nav.css' ?>">
@@ -26,8 +32,6 @@
     <script src="<?= constant("BASEURL") . 'assets/js/main.js' ?>"></script>
 </head>
 <body>
-
-<?php require_once (constant("ROOTPATH") . '\config\database.php'); ?>
 
 <?php require_once (constant("ROOTPATH") . '\public\layouts\navigation\nav-guest.php'); $side_nav_content = false; ?>
 
