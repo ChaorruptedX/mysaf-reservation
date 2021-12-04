@@ -8,7 +8,7 @@
 <?php require_once (constant("ROOTPATH") . '\config\database.php'); ?>
 
 <!-- Session -->
-<?php // require_once (constant("ROOTPATH") . '\components\session.php'); ?>
+<?php require_once (constant("ROOTPATH") . '\components\session.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
