@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/login.css' ?>">
 
     <!-- Scripts -->
+    <script src="<?= constant("BASEURL") . 'assets/js/jquery-3.6.0.min.js' ?>"></script>
     <script src="<?= constant("BASEURL") . 'assets/js/main.js' ?>"></script>
 </head>
 <body>
