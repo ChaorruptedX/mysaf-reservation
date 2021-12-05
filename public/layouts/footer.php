@@ -1,5 +1,8 @@
 </div>
-<br> <br>
+
+<br>
+<br>
+
 <footer>
     &copy; <?= date('Y'); ?> MySaf Reservation
 </footer>
