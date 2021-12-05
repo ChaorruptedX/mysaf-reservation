@@ -3,7 +3,6 @@
         <a class="active" href="index.php">Home</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
-        <a href="login.php">Login</a>
-        <a href="#register">Register</a>
+        <a href="login.php" style="float: right;">Login</a>
     </div>
 </nav>
