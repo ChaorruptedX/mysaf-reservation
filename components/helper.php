@@ -16,6 +16,7 @@
     {
         if (!isset($caller))
         {
+            $debug = debug_backtrace(1);
             $caller = array_shift(debug_backtrace(1));
         }
         
@@ -31,7 +32,8 @@
      */
     function dd($var)
     {
-        $caller = array_shift(debug_backtrace(1));
+        $debug = debug_backtrace(1);
+        $caller = array_shift($debug);
         d($var, $caller);
         die();
     }
