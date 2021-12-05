@@ -40,4 +40,4 @@
 
 <?php // require_once (constant("ROOTPATH") . '\public\layouts\navigation\nav-committee.php'); $side_nav_content = true; ?>
 
-<div class="<?= ($side_nav_content) ? "side-nav-" : null; ?>content">
+<div class="<?= ($side_nav_content) ? "side-nav-content" : "container"; ?>">
