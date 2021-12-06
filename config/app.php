@@ -5,6 +5,6 @@
 
     /* Application Root Path and Base URL */
     define("ROOTPATH", trim(dirname(__FILE__), "config"));
-    define("BASEURL", '\utem/bitm-2113-web-application-development/mysaf-reservation/');
+    define("BASEURL", '\mysaf-reservation/');
 
 ?>
