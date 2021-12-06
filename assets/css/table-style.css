@@ -1,0 +1,58 @@
+#user 
+{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse; /*share border */
+    width: 100%; 
+}
+  
+#user td, #user th 
+{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  
+#user tr:nth-child(even)
+{
+    background-color: #f2f2f2;
+}
+  
+#user tr:hover {
+    background-color: #ddd;
+}
+  
+#user th 
+{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #038157;
+    color: white;
+}
+
+button.register-user 
+{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+  button.register-user:hover 
+{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+  button.register-user:active 
+{
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+  
