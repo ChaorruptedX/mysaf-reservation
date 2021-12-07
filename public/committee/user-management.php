@@ -3,7 +3,7 @@
 <div>
     <br>
     <h1>List of Users</h1>
-    <button class="button register-user">Register User</button>
+    <a href="<?= constant("BASEURL") . 'public/committee/register-user.php' ?>"><button class="button register-user">Register User</button></a>
 </div>
 
 <table id="user">

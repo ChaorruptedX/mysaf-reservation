@@ -1,0 +1,72 @@
+input.form, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Submit */
+
+  button.form.submit
+ {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button.form.submit:hover
+  {
+    background-color: #45a049;
+  }
+
+  /* back */
+
+  button.form.back
+  {
+     background-color: #fa0000;
+     color: white;
+     padding: 14px 20px;
+     margin: 8px 0;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+   }
+   
+   button.form.back:hover
+   {
+     background-color: #ce2626;
+   }
+
+   button.form.back:active
+   {
+     background-color: #ce2626;
+     transform: translateY(4px);
+   }
+
+   /* label */
+
+   label.form{
+     font-weight: bold;
+   }
+
+   /* structure */
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px; /*up and down*/
+    background: rgb(255, 255, 255);
+    border-style: groove;
+  }
