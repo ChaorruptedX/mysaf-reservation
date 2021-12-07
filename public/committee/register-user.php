@@ -6,7 +6,7 @@
     <a href="<?= constant("BASEURL") . 'public/committee/user-management.php' ?>"><button class="button form back">Back</button></a>
 </div>
 
-<div class="wrapper">
+<div class="wrapper form">
     <form>
         <label class="form" for="name">Name</label>
         <input class="input form" type="text" id="name" name="name" placeholder="Enter Name">
