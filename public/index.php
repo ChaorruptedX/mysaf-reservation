@@ -1,4 +1,4 @@
-<?php require_once ('layouts\header.php'); guestSession(); ?>
+<?php require_once ('layouts/header.php'); guestSession(); ?>
 
 <style>
 h1.home{
@@ -43,4 +43,4 @@ h1.home{
 <a href="<?= constant("BASEURL") . 'public/login.php' ?>"><button class="button home-reserve">Reserve Now</button></a>
 </div>
 
-<?php require_once ('layouts\footer.php'); ?>
+<?php require_once ('layouts/footer.php'); ?>

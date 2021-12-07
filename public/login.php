@@ -1,4 +1,4 @@
-<?php require_once ('layouts\header.php'); guestSession(); ?>
+<?php require_once ('layouts/header.php'); guestSession(); ?>
 
 <div class="wrapper fadeInDown">
     <div id="formContent">
@@ -97,4 +97,4 @@ $(function() { // Shorthand for $( document ).ready()
 
 </script>
 
-<?php require_once ('layouts\footer.php'); ?>
+<?php require_once ('layouts/footer.php'); ?>

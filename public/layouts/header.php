@@ -43,15 +43,15 @@
 
     if (!isset($_SESSTION)) // Guest
     {
-        require_once (constant("ROOTPATH") . '\public\layouts\navigation\nav-guest.php');
+        require_once (constant("ROOTPATH") . '/public/layouts/navigation/nav-guest.php');
     }
     else if ($_SESSION['id_role']) // User
     {
-        require_once (constant("ROOTPATH") . '\public\layouts\navigation\nav-user.php');
+        require_once (constant("ROOTPATH") . '/public/layouts/navigation/nav-user.php');
     }
     else if (in_array($_SESSION["role_code"], ["SA001", "MC001"])) // System Administrator || Mosque Committee
     {
-        require_once (constant("ROOTPATH") . '\public\layouts\navigation\nav-committee.php');
+        require_once (constant("ROOTPATH") . '/public/layouts/navigation/nav-committee.php');
         $side_nav_content = true;
     }
 
