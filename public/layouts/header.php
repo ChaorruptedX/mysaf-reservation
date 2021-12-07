@@ -33,6 +33,7 @@
     <!-- Scripts -->
     <script src="<?= constant("BASEURL") . 'assets/js/jquery-3.6.0.min.js' ?>"></script>
     <script src="<?= constant("BASEURL") . 'assets/js/main.js' ?>"></script>
+    <script src="<?= constant("BASEURL") . 'assets/js/jquery-validation/jquery.validate.min.js' ?>"></script>
 </head>
 <body>
 
