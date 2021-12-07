@@ -24,7 +24,7 @@
             <input type="email" id="email" class="input login" name="email" placeholder="Email" required>
             <input type="password" id="password-signup" class="input login" name="password" placeholder="Password" required>
             <input type="text" id="name" class="input login" name="name" placeholder="Name" required>
-            <input type="number" id="phone" class="input login" name="phone" placeholder="Phone Number" required>
+            <input type="text" id="phone" class="input login" name="phone" placeholder="Phone Number" required>
             <button class="button login">Register</button>
         </form>
 
@@ -57,6 +57,11 @@ $(function() { // Shorthand for $( document ).ready()
     $("form#signup").validate({ // Sign Up Validation
         errorElement: "div",
         errorClass: "validation-error",
+        rules: {
+            phone: {
+                number: true,
+            }
+        },
         messages: {
             email: {
                 required: "Email address is required",
