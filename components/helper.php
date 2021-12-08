@@ -11,21 +11,30 @@
     /**
      * Highlight Active URL
      */
-    function active_url($file_name)
+    function active_url($file_names)
     {
         $basename_url = basename($_SERVER['REQUEST_URI']); // Get File Name
         $parse_url = parse_url($basename_url, PHP_URL_PATH); // Remove Parameters
 
-        if ($file_name == $parse_url)
+        if (is_array($file_names))
         {
-            $active = "active";
+            foreach ($file_names as $file_name)
+            {
+                if ($file_name == $parse_url)
+                {
+                    return "active";
+                }
+            }
         }
         else
         {
-            $active = null;
+            if ($file_names == $parse_url)
+            {
+                    return "active";
+            }
         }
 
-        return $active;
+        return null;
     }
 
     /**
