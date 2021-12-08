@@ -4,6 +4,6 @@
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
         <a class="<?= active_url("login.php"); ?>" href="<?= constant("BASEURL") . 'public/login.php' ?>" style="float: right;">Login</a>
-        <a class="<?= active_url("user-management.php"); ?>" href="<?= constant("BASEURL") . 'public/committee/user-management.php' ?>">User Management</a>
+        <a class="<?= active_url(["user-management.php", "register-user.php"]); ?>" href="<?= constant("BASEURL") . 'public/committee/user-management.php' ?>">User Management</a>
     </div>
 </nav>
