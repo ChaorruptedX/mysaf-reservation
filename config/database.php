@@ -3,7 +3,7 @@
     $servername = "localhost";
     $databasename = "mysaf_reservation";
     $username = "root";
-    $password = "";
+    $password = "mysql";
 
     try
     {

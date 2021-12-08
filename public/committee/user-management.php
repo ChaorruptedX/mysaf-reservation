@@ -1,4 +1,4 @@
-<?php require_once ('../layouts\header.php'); ?>
+<?php require_once ('../layouts/header.php'); ?>
 
 <div>
     <br>
@@ -42,4 +42,4 @@
 
 </table>
 
-<?php require_once ('../layouts\footer.php'); ?>
+<?php require_once ('../layouts/footer.php'); ?>

@@ -1,4 +1,4 @@
-<?php require_once ('layouts\header.php'); guestSession(); ?>
+<?php require_once ('layouts/header.php'); guestSession(); ?>
 
 <h1 class="h1 home">MASJID SAYYIDINA ABU BAKAR, UTEM</h1>
 
@@ -28,4 +28,4 @@
 <a href="<?= constant("BASEURL") . 'public/login.php' ?>"><button class="button home-reserve">Reserve Now</button></a>
 </div>
 
-<?php require_once ('layouts\footer.php'); ?>
+<?php require_once ('layouts/footer.php'); ?>

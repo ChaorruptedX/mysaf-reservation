@@ -13,6 +13,8 @@ A web-based application that is focus on management of mosque congregation durin
 ## Installation
 
 * Download source code => ```git clone https://github.com/ChaorruptedX/mysaf-reservation.git```
+* Create database `mysaf_reservation` in MySQL
+* Adjust the database configuration in `config/database.php`
 
 ## Git Command
 
@@ -30,9 +32,10 @@ A web-based application that is focus on management of mosque congregation durin
 
 ## References
 
-* HTML		- https://www.w3schools.com/html/
-* CSS		- https://www.w3schools.com/css/
-* JS		- https://www.w3schools.com/js/
-* jQuery	- https://www.w3schools.com/jquERy/
-* PHP		- https://www.w3schools.com/php/
-* SQL		- https://www.w3schools.com/sql/
+* HTML				- https://www.w3schools.com/html/
+* CSS				- https://www.w3schools.com/css/
+* JS				- https://www.w3schools.com/js/
+* jQuery			- https://www.w3schools.com/jquERy/
+* jQuery Validation	- https://jqueryvalidation.org/
+* PHP				- https://www.w3schools.com/php/
+* SQL				- https://www.w3schools.com/sql/
