@@ -9,6 +9,26 @@
     }
 
     /**
+     * Highlight Active URL
+     */
+    function active_url($file_name)
+    {
+        $basename_url = basename($_SERVER['REQUEST_URI']); // Get File Name
+        $parse_url = parse_url($basename_url, PHP_URL_PATH); // Remove Parameters
+
+        if ($file_name == $parse_url)
+        {
+            $active = "active";
+        }
+        else
+        {
+            $active = null;
+        }
+
+        return $active;
+    }
+
+    /**
      * Debug function
      * d($var);
      */
