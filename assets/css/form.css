@@ -2,7 +2,6 @@ input.form, select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
-    display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -64,8 +63,6 @@ input.form, select {
     align-items: center;
     flex-direction: column; 
     justify-content: center;
-    width: 100%;
-    min-height: 100%;
     padding: 20px; /*up and down*/
     background: rgb(255, 255, 255);
     border-style: groove;

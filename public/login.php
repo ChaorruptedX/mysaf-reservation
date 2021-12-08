@@ -1,6 +1,6 @@
 <?php require_once ('layouts\header.php'); guestSession(); ?>
 
-<div class="wrapper fadeInDown">
+<div class="wrapper">
     <div id="formContent">
 
     <!-- Tabs Titles -->
@@ -10,7 +10,7 @@
         </div>
   
         <h2 class="login active" id="sign-in"> Sign In </h2>
-        <h2 class="login inactive underlineHover" id="sign-up">Sign Up </h2>
+        <h2 class="login inactive " id="sign-up">Sign Up </h2>
 
         <!-- Login Form -->
         <form id="signin" >
@@ -45,8 +45,8 @@ $(document).ready(function() {
         $("form#signin").show();
         $("form#signup").hide();
 
-        $( "h2#sign-up" ).removeClass( "active" ).addClass( "inactive underlineHover" );
-        $( "h2#sign-in" ).removeClass( "inactive underlineHover" ).addClass( "active" );
+        $( "h2#sign-up" ).removeClass( "active" ).addClass( "inactive " );
+        $( "h2#sign-in" ).removeClass( "inactive" ).addClass( "active" );
       
     });
 
@@ -55,8 +55,8 @@ $(document).ready(function() {
         $("form#signup").show();
         $("form#signin").hide();
 
-        $( "h2#sign-up" ).removeClass( "inactive underlineHover" ).addClass( "active" );
-        $( "h2#sign-in" ).removeClass( "active" ).addClass( "inactive underlineHover" );
+        $( "h2#sign-up" ).removeClass( "inactive" ).addClass( "active" );
+        $( "h2#sign-in" ).removeClass( "active" ).addClass( "inactive" );
     });
 
 });

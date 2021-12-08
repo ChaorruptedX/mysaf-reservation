@@ -3,7 +3,7 @@
 <div>
     <br>
     <h1>Register User</h1>
-    <a href="<?= constant("BASEURL") . 'public/committee/user-management.php' ?>"><button class="button form back">Back</button></a>
+    <a href="<?= constant("BASEURL") . 'public/committee/user-management.php' ?>"><button class="form back">Back</button></a>
 </div>
 
 <div class="wrapper form">
@@ -23,7 +23,7 @@
             <option value="ajk">Mosque Committee</option>
         </select>
 
-        <button class="button form submit">Register</button>
+        <button class="form submit">Register</button>
   </form>
 </div>
 
