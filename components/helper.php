@@ -17,7 +17,7 @@
         if (!isset($caller))
         {
             $debug = debug_backtrace(1);
-            $caller = array_shift(debug_backtrace(1));
+            $caller = array_shift($debug);
         }
         
         echo '<code>File: ' . $caller['file'] . ' / Line: ' . $caller['line'] . '</code>';
