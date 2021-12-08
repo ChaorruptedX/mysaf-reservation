@@ -9,13 +9,8 @@
             <img src ="<?= constant("BASEURL") . 'assets/image/logo.png' ?>" id="icon" alt="System Icon" />
         </div>
   
-<<<<<<< HEAD
         <h2 class="login active" id="sign-in"> Sign In </h2>
         <h2 class="login inactive " id="sign-up">Sign Up </h2>
-=======
-        <h2 class="login active" id="sign-in">Sign In</h2>
-        <h2 class="login inactive underlineHover" id="sign-up">Sign Up</h2>
->>>>>>> 5648028e1ca5a7bde94b6e5d9f02d7159914c4f2
 
         <!-- Login Form -->
         <form id="signin" method="post">
