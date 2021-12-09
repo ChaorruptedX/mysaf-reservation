@@ -18,10 +18,10 @@ A web-based application that is focus on management of mosque congregation durin
 
 ## Git Command
 
-* To Pull System from GitLab:
+* To Pull System from GitHub:
 	* ```git pull```
 
-* To Push System to GitLab:
+* To Push System to GitHub:
 	* ```git pull```
 	* ```git status```
 	* ```git add YourFilePathwayName```
