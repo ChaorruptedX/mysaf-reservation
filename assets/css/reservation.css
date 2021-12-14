@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body, html {
+    height: 100%; 
+  } 
+
+  .bground {
+    opacity: 0.7;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Style inputs */
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit],[type=reset] {
+    background-color: lightgreen;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: green;
+  }
+
+  input[type=reset]:hover {
+    background-color: green;
+  }
+
+  /* Style the container/contact section */
+  .container {
+    border-radius: 5px;
+    background-color: lightpink;
+    padding: 10px;
+  }
+  
+  /* Create two columns that float next to eachother */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.center {
+  text-align: center;
+}
+.text {
+  margin:20px;
+}
+
+.wrapper {
+  overflow: hidden;
+  position: relative;
+}
+.content {
+  position :relative;
+}
+
+.label {
+  font-size: large;
+  font-weight:bold
+}
+
