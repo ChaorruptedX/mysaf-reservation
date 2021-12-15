@@ -1,24 +1,13 @@
 <?php require_once ('../layouts/header.php'); userSession(); ?>
 
-<link rel = "stylesheet" type="text/css" href="reservation.css">
+<link rel ="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/reservation.css' ?>">
+<link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/main.css' ?>">
+<link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/nav.css' ?>">
+<link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/login.css' ?>">
+<link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/table-style.css' ?>">
+<link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/form.css' ?>">
 <div class = "wrapper">
     <img class="bground" src="assets/image/test2.jpg">
-<body>
-    
-    <nav class ="content">
-
-        <ul>
-           <li><a href=".html">User Management</a></li>
-            <li><a href=".html">Manage Reservation</a></li>
-            <ul>
-                <li><a href=".html">List of Reservation</a></li>
-            </ul>
-            <li><a href=".html">Report</a></li>
-            <li><a href=".html">My Account</a></li>
-            <li><a href=".html">Logout</a></li>
-        </ul>
-    </nav>
-    <hr>
     <div class ="center content">
         
         <div class = "row">
@@ -39,6 +28,5 @@
             </form>
         </div>
     </div>
-</body>
 </div>
 <?php require_once ('../layouts/footer.php'); ?>
