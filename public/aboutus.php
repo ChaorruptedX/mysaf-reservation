@@ -1,6 +1,13 @@
 <?php require_once ('layouts/header.php'); guestSession(); ?>
 
-<link rel = "stylesheet" type="text/css" href="aboutus_design.css">
+
+<link rel ="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/aboutus_design.css' ?>">
+<link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/main.css' ?>">
+<link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/nav.css' ?>">
+<link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/login.css' ?>">
+<link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/table-style.css' ?>">
+<link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/form.css' ?>">
+
 <div class="about-section">
   <h1>About Us Page</h1>
   <p>At the end of 2019, the world was rocked by an outbreak of such a violent pandemic, known as Coronavirus or Covid-19.To control and break the chain of this pandemic, the government has implemented several Standard Operating Procedure (SOP) that must be complied with by all Malaysians.</p>
