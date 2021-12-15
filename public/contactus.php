@@ -1,21 +1,15 @@
 <?php require_once ('layouts/header.php'); guestSession(); ?>
 
 
-<link rel = "stylesheet" type="text/css" href="reservation.css">
+<link rel ="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/reservation.css' ?>">
+<link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/main.css' ?>">
+<link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/nav.css' ?>">
+<link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/login.css' ?>">
+<link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/table-style.css' ?>">
+<link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/form.css' ?>">
+
 <div class = "wrapper">
   <img class="bground" src="assets/image/test2.jpg">
-<body>
-    <nav class =" content">
-        <ul>
-           <li><a href=".html">Home</a></li>
-            <li><a href=".html">My Reservation</a></li>
-            <li><a href=".html">History</a></li>
-            <li><a href=".html">My Account</a></li>
-            <li><a href=".html">Logout</a></li>
-        </ul>
-    </nav>
-    
-
     <div class ="center content"><hr>
     <h2 name = "title">Contact Us</h2>
         <p>For all enquires,please leave us a message: </p>
@@ -51,8 +45,6 @@
             <a href="https://www.facebook.com/"target="_blank"><img src = "img/fb.png" width="60px" height="60px"></a>   </p>    
         </div>   
       </div>
-
-</body>
 </div>
 
 <?php require_once ('layouts/footer.php'); ?>
