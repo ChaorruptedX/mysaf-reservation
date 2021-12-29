@@ -7,6 +7,6 @@
 
         <!-- Temporary Link for Assignment 2 Presentation Purpose -->
         <a class="<?= active_url(["user-management.php", "register-user.php"]); ?>" href="<?= constant("BASEURL") . 'public/committee/user-management.php' ?>">User Management</a>
-        <a class="<?= active_url("reservation.php"); ?>" href="<?= constant("BASEURL") . 'public/user/reservation.php' ?>">Reservation</a>
+        <a class="<?= active_url("create-reservation.php"); ?>" href="<?= constant("BASEURL") . 'public/user/create-reservation.php' ?>">Reservation</a>
     </div>
 </nav>
