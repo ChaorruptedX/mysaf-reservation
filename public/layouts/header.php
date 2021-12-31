@@ -40,12 +40,12 @@
 <?php
 
     $side_nav_content = false;
-
-    if (!isset($_SESSTION)) // Guest
+    
+    if (!isset($_SESSION['role_code'])) // Guest
     {
         require_once (constant("ROOTPATH") . '/public/layouts/navigation/nav-guest.php');
     }
-    else if ($_SESSION['id_role']) // User
+    else if ($_SESSION['role_code'] == "U001") // User
     {
         require_once (constant("ROOTPATH") . '/public/layouts/navigation/nav-user.php');
     }
