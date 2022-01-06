@@ -11,7 +11,7 @@
     {
         if (!isset($_SESSION["role_code"]) || $_SESSION["role_code"] != "SA001")
         {
-            header('Location: ../index.php');
+            header('Location: ' . constant("BASEURL") . 'public/index.php');
         }
     }
 
@@ -19,7 +19,7 @@
     {
         if (!isset($_SESSION["role_code"]) || !in_array($_SESSION["role_code"], ["SA001", "MC001"]))
         {
-            header('Location: ../index.php');
+            header('Location: ' . constant("BASEURL") . 'public/index.php');
         }
     }
 
@@ -27,7 +27,7 @@
     {
         if (!isset($_SESSION["role_code"]) || $_SESSION["role_code"] != "U001")
         {
-            header('Location: ../index.php');
+            header('Location: ' . constant("BASEURL") . 'public/index.php');
         }
     }
 
@@ -37,11 +37,11 @@
         {
             if ($_SESSION["role_code"] == "U001")
             {
-                header('Location: user/index.php');
+                header('Location: ' . constant("BASEURL") . 'public/user/index.php');
             }
             else if (in_array($_SESSION["role_code"], ["SA001", "MC001"]))
             {
-                header('Location: committee/index.php');
+                header('Location: ' . constant("BASEURL") . 'public/committee/index.php');
             }
         }
     }
