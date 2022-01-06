@@ -40,8 +40,8 @@
 <?php
 
     $side_nav_content = false;
-    
-    if (!isset($_SESSION['role_code'])) // Guest
+
+    if (!$_SESSION['role_code']) // Guest
     {
         require_once (constant("ROOTPATH") . '/public/layouts/navigation/nav-guest.php');
     }
