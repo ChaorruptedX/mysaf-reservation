@@ -41,7 +41,7 @@
 
     $side_nav_content = false;
 
-    if (!$_SESSION['role_code']) // Guest
+    if (empty($_SESSION)) // Guest
     {
         require_once (constant("ROOTPATH") . '/public/layouts/navigation/nav-guest.php');
     }
