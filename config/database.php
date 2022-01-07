@@ -10,11 +10,11 @@
         $conn = new PDO("mysql:host=" . $servername . ";dbname=" . $databasename, $username, $password); // Create Connection
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // Set the PDO Error Mode to Exception
 
-        // dd("Connected successfully");
+        // die("Connected successfully");
     }
     catch (PDOException $e)
     {
-        dd("Connection failed: " . $e->getMessage());
+        die("Connection failed: " . $e->getMessage());
     }
 
 ?>
