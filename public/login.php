@@ -9,7 +9,47 @@
     {
         if ($_POST['type'] == "sign-in") // Sign In Process
         {
-            dd($_POST);
+            try {
+                // Authenticate Email and Password
+                $stmt = $conn->prepare("
+                    SELECT
+                        user.id,
+                        user.email,
+                        user.password,
+                        lookup_role.code AS role_code
+                    FROM user
+                    LEFT JOIN lookup_role
+                        ON user.id_role = lookup_role.id
+                    WHERE
+                        user.email='" . $_POST['email'] . "'
+                        AND user.deleted_at='0'
+                ");
+
+                $stmt->execute();
+
+                // Set the Resulting Array to Associative
+                $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+                $row = $stmt->fetch();
+            }
+            catch (PDOException $e)
+            {
+                dd("Error: " . $e->getMessage());
+            }
+
+            if (!empty($row) && password_verify($_POST['password'], $row['password'])) // Verify Valid Password
+            {
+                // Set Session Variables
+                $_SESSION["id_user"] = $row['id'];
+                $_SESSION["role_code"] = $row['role_code'];
+                $_SESSION["user_email"] = $row['email'];
+
+                guestSession(); // If the Current Session Is Not a Guest, then Redirect to a Specific Page Based on User Role
+            }
+            else
+            {
+                $authentication_validation = false;
+            }
         }
         else if ($_POST['type'] == "sign-up") // Sign Up Process
         {
