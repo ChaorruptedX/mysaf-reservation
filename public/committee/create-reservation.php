@@ -1,4 +1,4 @@
-<?php require_once ('../layouts/header.php'); userSession(); ?>
+<?php require_once ('../layouts/header.php'); committeeSession(); ?>
 
 <div>
     <br>
