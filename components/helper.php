@@ -1,14 +1,6 @@
 <?php
 
     /**
-     * bcrypt Algorithm for Password Hashing
-     */
-    function bcrypt_hash($password)
-    {
-        return password_hash($password, PASSWORD_BCRYPT);
-    }
-
-    /**
      * Highlight Active URL
      */
     function active_url($file_names)
@@ -35,6 +27,14 @@
         }
 
         return null;
+    }
+
+    /**
+     * bcrypt Algorithm for Password Hashing
+     */
+    function bcrypt_hash($password)
+    {
+        return password_hash($password, PASSWORD_BCRYPT);
     }
 
     /**
@@ -65,6 +65,51 @@
         $caller = array_shift($debug);
         d($var, $caller);
         die();
+    }
+
+    /**
+     * Get Lookup Role Data
+     */
+    function lookupRole($conn, $code = null)
+    {
+        if ($code === null)
+        {
+            $stmt = $conn->prepare("
+                SELECT
+                    *
+                FROM lookup_role
+                WHERE
+                    deleted_at='0'
+            ");
+        }
+        else
+        {
+            $stmt = $conn->prepare("
+                SELECT
+                    *
+                FROM lookup_role
+                WHERE
+                    code='" . $code . "'
+                    AND deleted_at='0'
+            ");
+        }
+
+        try
+        {
+            $stmt->execute();
+
+            // Set the Resulting Array to Associative
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        }
+        catch (PDOException $e)
+        {
+            dd("Error: " . $e->getMessage());
+        }
+
+        if ($code === null)
+            return $stmt->fetchAll();
+        else
+            return $stmt->fetch();
     }
 
 ?>
