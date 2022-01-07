@@ -1,11 +1,11 @@
 <!-- Application Configuration -->
 <?php require_once (dirname(__FILE__) . '\..\..\config\app.php'); ?>
 
-<!-- Helper -->
-<?php require_once (constant("ROOTPATH") . '\components\helper.php'); ?>
-
 <!-- Database Connection -->
 <?php require_once (constant("ROOTPATH") . '\config\database.php'); ?>
+
+<!-- Helper -->
+<?php require_once (constant("ROOTPATH") . '\components\helper.php'); ?>
 
 <!-- Session -->
 <?php require_once (constant("ROOTPATH") . '\components\session.php'); ?>
