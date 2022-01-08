@@ -29,6 +29,7 @@
     <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/login.css' ?>">
     <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/table-style.css' ?>">
     <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/form.css' ?>">
+    <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/dashboard.css' ?>">
 
     <!-- Scripts -->
     <script src="<?= constant("BASEURL") . 'assets/js/jquery-3.6.0.min.js' ?>"></script>
