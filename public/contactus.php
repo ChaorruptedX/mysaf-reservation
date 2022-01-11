@@ -17,13 +17,13 @@
                     <span class ="label">Last Name</span>
                         <input type="text" id="lname" name="lastname" placeholder="Your last name..">
                     <span class ="label">State</span>
-                        <select id="state" name="state">
-                            <option value="johor">Johor</option>
-                            <option value="melaka">Melaka</option>
-                            <option value="Kelantan">Kelantan</option>
-                            <option value="terengganu">Terengganu</option>
-                            <option value="Negeri">Negeri Sembilan</option>
-                            <option value="Penang">Penang</option>
+                        <select id="faculty" name="faculty">
+                            <option value="FTMK">FTMK</option>
+                            <option value="FKE">FKE</option>
+                            <option value="FKEKK">FKEKK</option>
+                            <option value="FKP">FKP</option>
+                            <option value="FPTT"> FPTT</option>
+                            <option value="FTKEE">FTKEE</option>
                         </select>
                     <span class ="label">Subject</span>
                     <textarea id="subject" name="subject" placeholder="Write something.." style="height:160px"></textarea>
