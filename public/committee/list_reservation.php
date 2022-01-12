@@ -1,6 +1,5 @@
 <?php
 session_start();
-// include_once"customerheader.php";
 // require_once ('../layouts/header.php'); // committeeSession();
 
 $stmt = $conn->prepare("SELECT id,id_personal_detail,name,open_time,close_time,maximum_capacity,created_at,updated_at from reservation ");
