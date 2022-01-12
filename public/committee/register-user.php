@@ -138,8 +138,7 @@
         <label class="form" for="roles">Roles</label>
         <select id="roles" name="roles" required>
             <option value="">Please Select ...</option>
-            <option value="1">System Admin</option>
-            <option value="2">Mosque Committee</option>
+            <option value="<?= lookupRole($conn, "MC001")['id'] ?>"><?= lookupRole($conn, "MC001")['description'] ?></option>
         </select>
 
         <button class="form submit">Register</button>
