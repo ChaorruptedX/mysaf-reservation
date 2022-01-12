@@ -10,7 +10,7 @@ $stmt->close();
 $check=mysqli_num_rows($run);
 ?>
 
-<link rel ="stylesheet" href="list_css.css">
+<link rel ="stylesheet" href="../../assets/css/list_css.css">
 <body>
 <table align="center" class="styled-table">
     <thead>
