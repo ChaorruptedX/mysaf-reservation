@@ -19,6 +19,7 @@
         ON user.id_role = lookup_role.id
       WHERE
         personal_detail.deleted_at='0'
+        AND user.id_role != '" . lookupRole($conn, "SA001")['id'] . "'
     ");
 
     $stmt->execute();
