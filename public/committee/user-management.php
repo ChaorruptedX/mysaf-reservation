@@ -6,7 +6,7 @@
   {
     $stmt = $conn->prepare("
     SELECT
-      personal_detail.id,
+      user.id,
       personal_detail.name,
       user.email,
       personal_detail.tel_no,
@@ -65,7 +65,7 @@
     <td><?php echo $data['email'];?></td>
     <td><?php echo $data['tel_no'];?></td>
     <td><?php echo $data['role_desc'];?></td>
-    <td align="center"><a href="golfer-update-record.php?id=<?php echo $row["id"];?>">Edit</a> || <a href="golfer-delete-record.php?id=<?php echo $row["id"];?>">Delete</a></td>
+    <td align="center"><a href="update-user.php?id=<?php echo $data["id"];?>">Edit</a> || <a href="delete-user.php?id=<?php echo $data["id"];?>">Delete</a></td>
   </tr>
   <?php
     }
