@@ -1,15 +1,22 @@
 <?php
-session_start();
-// require_once ('../layouts/header.php'); // committeeSession();
-
+require_once ('../layouts/header.php'); // committeeSession();
+try
+{
 $stmt = $conn->prepare("SELECT id,id_personal_detail,name,open_time,close_time,maximum_capacity,created_at,updated_at from reservation ");
 $stmt->execute();
 $run = $stmt->get_result();
-$stmt->close();  
-$check=mysqli_num_rows($run);
+$stmt->setFetchMode(PDO::FETCH_ASSOC);
+// $check=mysqli_num_rows($run);
+$row = $stmt->fetchAll();
+}
+
+catch (PDOException $e)
+{
+  dd("Error: " . $e->getMessage());
+}
 ?>
 
-<link rel ="stylesheet" href="../../assets/css/list_css.css">
+<link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/list_css.css' ?>">
 <body>
 <table align="center" class="styled-table">
     <thead>
@@ -25,11 +32,10 @@ $check=mysqli_num_rows($run);
         </tr>
     </thead>
     <?php
-    if($check>0)
+    foreach($row as $rows)
     {
-        while($rows=mysqli_fetch_assoc($run))
-        {
-    ?>   
+    ?>
+
     <tbody>       
         <tr>
             <td><?php echo $rows['id'];?></td>
@@ -43,14 +49,8 @@ $check=mysqli_num_rows($run);
         </tr>
     </tbody>
 <?php
-        }
-    }
-    else
-    {
-        echo "<h2 class=\"center\">There are no reservation history</h2>";
     }
 ?>
-
 </body>
 <!-- <?php require_once ('../layouts/footer.php'); ?> -->
 
