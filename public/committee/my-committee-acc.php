@@ -62,7 +62,7 @@ try
     </table>
     <br>
     <div>
-        <a href="<?= constant("BASEURL") . 'public/committee/update-account.php' ?>"><button class="form submit">Update Account</button></a>
+        <a href="<?= constant("BASEURL") . 'public/committee/update-committee-acc.php' ?>"><button class="form submit">Update Account</button></a>
     </div>
 </div>
 
