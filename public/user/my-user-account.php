@@ -27,7 +27,7 @@
     </table>
     <br>
     <div>
-        <a href=""><button class="form submit">Update Account</button></a>
+        <a href="<?= constant("BASEURL") . 'public/user/update-account.php' ?>"><button class="form submit">Update Account</button></a>
     </div>
 </div>
 
