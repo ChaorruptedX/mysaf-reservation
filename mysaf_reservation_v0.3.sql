@@ -197,6 +197,7 @@ CREATE TABLE IF NOT EXISTS `user_reservation` (
   `id` int NOT NULL AUTO_INCREMENT,
   `id_personal_detail` int NOT NULL COMMENT 'User',
   `id_reservation` int NOT NULL,
+  `status` int NOT NULL COMMENT '1 = Reserved, 0 = Cancelled',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `deleted_at` int NOT NULL DEFAULT '0',
