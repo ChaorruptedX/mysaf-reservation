@@ -96,6 +96,40 @@
     }
 
     /**
+     * Get Reservation Data Closest to Current Date
+     */
+    function getClosestReservation($conn)
+    {
+        try
+        {
+            $stmt = $conn->prepare("
+                SELECT
+                    *
+                FROM reservation
+                WHERE
+                    close_time >= '" . getCurrentDateTime() . "'
+                    AND deleted_at = '0'
+            ");
+
+            $stmt->execute();
+
+            // Set the Resulting Array to Associative
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        }
+        catch (PDOException $e)
+        {
+            dd("Error: " . $e->getMessage());
+        }
+
+        return $stmt->fetch();
+    }
+
+    function getCurrentDateTime()
+    {
+        return date('Y-m-d H:i:s');
+    }
+
+    /**
      * Get Personal Detail Data by ID User
      */
     function getPersonalDetailbyIdUser($conn, $id_user)
