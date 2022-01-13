@@ -70,7 +70,7 @@
     /**
      * Get Active Mosque Data
      */
-    function getActiveMosqueData($conn)
+    function getActiveMosque($conn)
     {
         try
         {
