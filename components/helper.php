@@ -68,34 +68,91 @@
     }
 
     /**
+     * Get Active Mosque Data
+     */
+    function getActiveMosqueData($conn)
+    {
+        try
+        {
+            $stmt = $conn->prepare("
+                SELECT
+                    *
+                FROM mosque
+                WHERE
+                    deleted_at='0'
+            ");
+
+            $stmt->execute();
+
+            // Set the Resulting Array to Associative
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        }
+        catch (PDOException $e)
+        {
+            dd("Error: " . $e->getMessage());
+        }
+
+        return $stmt->fetch();
+    }
+
+    /**
+     * Get Personal Detail Data by ID User
+     */
+    function getPersonalDetailbyIdUser($conn, $id_user)
+    {
+        try
+        {
+            $stmt = $conn->prepare("
+                SELECT
+                    *
+                FROM personal_detail
+                WHERE
+                    id_user='" . $id_user . "'
+                    AND deleted_at='0'
+            ");
+
+            $stmt->execute();
+
+            // Set the Resulting Array to Associative
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        }
+        catch (PDOException $e)
+        {
+            dd("Error: " . $e->getMessage());
+        }
+
+        return $stmt->fetch();
+    }
+
+    /**
      * Get Lookup Role Data
      */
     function lookupRole($conn, $code = null)
     {
-        if ($code === null)
-        {
-            $stmt = $conn->prepare("
-                SELECT
-                    *
-                FROM lookup_role
-                WHERE
-                    deleted_at='0'
-            ");
-        }
-        else
-        {
-            $stmt = $conn->prepare("
-                SELECT
-                    *
-                FROM lookup_role
-                WHERE
-                    code='" . $code . "'
-                    AND deleted_at='0'
-            ");
-        }
-
         try
         {
+            if ($code === null)
+            {
+                $stmt = $conn->prepare("
+                    SELECT
+                        *
+                    FROM lookup_role
+                    WHERE
+                        deleted_at='0'
+                ");
+            }
+            else
+            {
+                $stmt = $conn->prepare("
+                    SELECT
+                        *
+                    FROM lookup_role
+                    WHERE
+                        code='" . $code . "'
+                        AND deleted_at='0'
+                ");
+            }
+
             $stmt->execute();
 
             // Set the Resulting Array to Associative
