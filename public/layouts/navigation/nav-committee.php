@@ -3,6 +3,6 @@
     <a class="<?= active_url(["user-management.php", "register-user.php"]); ?>" href="<?= constant("BASEURL") . 'public/committee/user-management.php' ?>">User Management</a>
     <a class="<?= active_url("create-reservation.php"); ?>" href="<?= constant("BASEURL") . 'public/committee/create-reservation.php' ?>">Create Reservation</a>
     <a href="#list-of-reservation">List of Reservation</a>
-    <a href="#my-account">My Account</a>
+    <a class="<?= active_url("my-committee-acc.php"); ?>" href="<?= constant("BASEURL") . 'public/committee/my-committee-acc.php' ?>">My Account</a>
     <a class="<?= active_url("logout.php"); ?>" href="<?= constant("BASEURL") . 'public/logout.php' ?>">Logout</a>
 </nav>
