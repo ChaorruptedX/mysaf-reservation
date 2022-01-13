@@ -41,7 +41,7 @@ button.home-reserve:hover
 {
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse; /*share border */
-    width: 100%; 
+    width: 95%; 
 }
   
 #user td, #user th /* td and th */
