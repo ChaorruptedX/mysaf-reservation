@@ -54,17 +54,17 @@
 
   <!-- PHP CODE TO FETCH DATA FROM ROWS-->
   <?php   // LOOP TILL END OF DATA 
-   foreach ($row as $teloq) 
+   foreach ($row as $data) 
    { 
   ?>
 
   <tr>
   <!--FETCHING DATA FROM EACH ROW OF EVERY COLUMN-->
-    <td><?php echo $teloq['id'];?></td>
-    <td><?php echo $teloq['name'];?></td>
-    <td><?php echo $teloq['tel_no'];?></td>
-    <td><?php echo $teloq['role_desc'];?></td>
-    <td align="center"><a href="golfer-update-record.php?id=<?php echo $row["id"];?>">Edit</a> || <a href="golfer-delete-record.php?id=<?php echo $row["id"];?>">Delete</a></td>
+    <td><?php echo $data['id'];?></td>
+    <td><?php echo $data['name'];?></td>
+    <td><?php echo $data['tel_no'];?></td>
+    <td><?php echo $data['role_desc'];?></td>
+    <td align="center"><a href="update-user.php?id=<?php echo $data["id"];?>">Edit</a> || <a href="golfer-delete-record.php?id=<?php echo $row["id"];?>">Delete</a></td>
   </tr>
   <?php
     }
