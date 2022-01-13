@@ -17,7 +17,7 @@
 
     <div class="content home">
 
-        <h2> Friday Prayers Saf Reservation</h2>
+        <h2> <?= $reservation['name']; ?> Reservation</h2>
 
         <table id="user">
             <tr>
