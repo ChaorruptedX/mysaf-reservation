@@ -104,11 +104,19 @@
         {
             $stmt = $conn->prepare("
                 SELECT
-                    *
+                    name,
+                    open_time,
+                    close_time,
+                    maximum_capacity,
+                    COUNT(user_reservation.id) AS total_user_reserved
                 FROM reservation
+                LEFT JOIN user_reservation
+                    ON reservation.id = user_reservation.id_reservation
                 WHERE
                     close_time >= '" . getCurrentDateTime() . "'
-                    AND deleted_at = '0'
+                    AND reservation.deleted_at = '0'
+                GROUP BY
+                    reservation.id
             ");
 
             $stmt->execute();
