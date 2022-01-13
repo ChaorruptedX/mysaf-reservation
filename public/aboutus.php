@@ -20,7 +20,7 @@
                 <h2>Ameerul Zaki</h2>
                 <p class="title">CEO & Founder</p>
                 <p>B031910250</p>
-                <p>zaki@gmail.com</p>
+                <p><a href="mailto:zaki@gmail.com">zaki@gmail.com</a></p>
                 <p><button class="button">Contact</button></p>
             </div>
         </div>
@@ -33,7 +33,7 @@
                 <h2>Mohd Asyraf</h2>
                 <p class="title">Art Director</p>
                 <p>B031910195</p>
-                <p>acap@gmail.com</p>
+                <p><a href="mailto:acap@gmail.com">acap@gmail.com</a></p>
                 <p><button class="button">Contact</button></p>
             </div>
         </div>
@@ -46,7 +46,7 @@
                 <h2>Abu Dzar</h2>
                 <p class="title">Designer</p>
                 <p>B031910163</p>
-                <p>abu@gmail.com</p>
+                <p><a href="mailto:abu@gmail.com">abu@gmail.com</a></p>
                 <p><button class="button">Contact</button></p>
             </div>
         </div>
