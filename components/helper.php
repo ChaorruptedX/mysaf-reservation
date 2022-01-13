@@ -133,6 +133,14 @@
     }
 
     /**
+     * Get Date Format
+     */
+    function getDateFormat($dateTime)
+    {
+        return date("j F Y", strtotime($dateTime));
+    }
+
+    /**
      * Get Full Date Time with Format
      */
     function getFullDateTimeFormat($dateTime)
