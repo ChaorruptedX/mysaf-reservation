@@ -111,6 +111,13 @@ CREATE TABLE IF NOT EXISTS `personal_detail` (
 --       `user` -> `id`
 --
 
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `personal_detail` (`id_user`, `name`, `tel_no`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Admin', '0123456789', '2021-12-03 06:49:00', '2021-12-03 06:49:00', 0);
+
 -- --------------------------------------------------------
 
 --
