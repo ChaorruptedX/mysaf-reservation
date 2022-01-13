@@ -61,10 +61,10 @@
 
   <tr>
   <!--FETCHING DATA FROM EACH ROW OF EVERY COLUMN-->
-    <td><?php echo $teloq['name'];?></td>
-    <td><?php echo $teloq['email'];?></td>
-    <td><?php echo $teloq['tel_no'];?></td>
-    <td><?php echo $teloq['role_desc'];?></td>
+    <td><?php echo $data['name'];?></td>
+    <td><?php echo $data['email'];?></td>
+    <td><?php echo $data['tel_no'];?></td>
+    <td><?php echo $data['role_desc'];?></td>
     <td align="center"><a href="golfer-update-record.php?id=<?php echo $row["id"];?>">Edit</a> || <a href="golfer-delete-record.php?id=<?php echo $row["id"];?>">Delete</a></td>
   </tr>
   <?php
