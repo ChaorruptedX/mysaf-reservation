@@ -124,9 +124,20 @@
         return $stmt->fetch();
     }
 
+    /**
+     * Get Current Date Time
+     */
     function getCurrentDateTime()
     {
         return date('Y-m-d H:i:s');
+    }
+
+    /**
+     * Get Full Date Time with Format
+     */
+    function getFullDateTimeFormat($dateTime)
+    {
+        return date("l, j F Y, g:i A", strtotime($dateTime));
     }
 
     /**
