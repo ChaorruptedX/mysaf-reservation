@@ -8,6 +8,7 @@
     SELECT
       personal_detail.id,
       personal_detail.name,
+      user.email,
       personal_detail.tel_no,
       user.id_role AS ROLE,
       lookup_role.description AS role_desc
@@ -44,10 +45,10 @@
 <table id="user">
 <br>
   <tr>
-    <th>ID</th>
     <th>Name</th>
+    <th>Email</th>
     <th>Phone Number</th>
-    <th>Roles</th>
+    <th>Role</th>
     <th>Action</th>
   
   </tr>
@@ -60,11 +61,11 @@
 
   <tr>
   <!--FETCHING DATA FROM EACH ROW OF EVERY COLUMN-->
-    <td><?php echo $data['id'];?></td>
-    <td><?php echo $data['name'];?></td>
-    <td><?php echo $data['tel_no'];?></td>
-    <td><?php echo $data['role_desc'];?></td>
-    <td align="center"><a href="update-user.php?id=<?php echo $data["id"];?>">Edit</a> || <a href="golfer-delete-record.php?id=<?php echo $row["id"];?>">Delete</a></td>
+    <td><?php echo $teloq['name'];?></td>
+    <td><?php echo $teloq['email'];?></td>
+    <td><?php echo $teloq['tel_no'];?></td>
+    <td><?php echo $teloq['role_desc'];?></td>
+    <td align="center"><a href="golfer-update-record.php?id=<?php echo $row["id"];?>">Edit</a> || <a href="golfer-delete-record.php?id=<?php echo $row["id"];?>">Delete</a></td>
   </tr>
   <?php
     }

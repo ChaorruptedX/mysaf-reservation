@@ -17,7 +17,7 @@
                     <span class ="label">Last Name</span>
                         <input type="text" id="lname" name="lastname" placeholder="Your last name..">
                     <span class ="label">State</span>
-                        <select id="state" name="state">
+                        <select id="faculty" name="faculty">
                             <option value="johor">Johor</option>
                             <option value="melaka">Melaka</option>
                             <option value="Kelantan">Kelantan</option>
