@@ -2,9 +2,10 @@
 <div>
     <h1>My Account</h1>
 </div>
-
+<a href="<?= constant("BASEURL") . 'public/user/my-user-account.php' ?>"><button class="form back">Back</button></a>
 <form method="post" action="update-profile.php">
     <div class="wrapper form">
+    
         <table id="user">
             <tr >
                 <th colspan="2" >Account Details</th>
