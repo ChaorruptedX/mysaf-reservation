@@ -39,6 +39,8 @@
     {
         dd("Error: " . $e->getMessage());
     }
+
+    $reservation = getClosestReservation($conn);
 ?>
 
 <div>
@@ -89,9 +91,10 @@
     <div class="box-saf">
         <div class="icon-part"><br>
         <img src ="<?= constant("BASEURL") . 'assets/image/saf-icon.png' ?>"alt="User Icon" width="50" height="50"/><br>
-        <h4> 20 January 2022 </h4>
+        <h3><?= $reservation['name']; ?></h3>
+        <h4> <?= getDateFormat($reservation['open_time']); ?> </h4>
             <small>Total Reservation</small>
-            <p>130 / 200</p>
+            <p><?= $reservation['total_user_reserved']; ?> / <?= $reservation['maximum_capacity'] ?></p>
         </div>
         <div class="card-content-saf">
             <a href="#">More Details </a>
