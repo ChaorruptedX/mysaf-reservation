@@ -40,30 +40,34 @@
     <a href="<?= constant("BASEURL") . 'public/committee/register-user.php' ?>"><button class="button register-user">Register User</button></a>
 </div>
 
-<table id="user" class="data-table">
-    <thead>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Phone Number</th>
-          <th>Role</th>
-          <th>Action</th>
-        </tr>
-    </thead>
+<div style="width: 90%;">
 
-    <tbody>
-        <!-- PHP CODE TO FETCH DATA FROM ROWS -->
-        <?php foreach ($row as $data) : ?> <!-- LOOP TILL END OF DATA  -->
+    <table id="user" class="data-table" style="width: 100%;">
+        <thead>
             <tr>
-                <!--FETCHING DATA FROM EACH ROW OF EVERY COLUMN-->
-                <td><?= $data['name']; ?></td>
-                <td><?= $data['email']; ?></td>
-                <td><?= $data['tel_no']; ?></td>
-                <td><?= $data['role_desc']; ?></td>
-                <td align="center"><a href="update-user.php?id=<?= $data["id"]; ?>">Edit</a> || <a href="delete-user.php?id=<?= $data["id"]; ?>">Delete</a></td>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Role</th>
+            <th>Action</th>
             </tr>
-        <?php endforeach; ?>
-    </tbody>
-</table>
+        </thead>
+
+        <tbody>
+            <!-- PHP CODE TO FETCH DATA FROM ROWS -->
+            <?php foreach ($row as $data) : ?> <!-- LOOP TILL END OF DATA  -->
+                <tr>
+                    <!--FETCHING DATA FROM EACH ROW OF EVERY COLUMN-->
+                    <td><?= $data['name']; ?></td>
+                    <td><?= $data['email']; ?></td>
+                    <td><?= $data['tel_no']; ?></td>
+                    <td><?= $data['role_desc']; ?></td>
+                    <td align="center"><a href="update-user.php?id=<?= $data["id"]; ?>">Edit</a> || <a href="delete-user.php?id=<?= $data["id"]; ?>">Delete</a></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+
+</div>
 
 <?php require_once ('../layouts/footer.php'); ?>
