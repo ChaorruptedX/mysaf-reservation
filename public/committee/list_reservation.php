@@ -4,15 +4,12 @@ try
 {
 $stmt = $conn->prepare("SELECT id,id_personal_detail,name,open_time,close_time,maximum_capacity,created_at,updated_at from reservation ");
 $stmt->execute();
-$run = $stmt->get_result();
 $stmt->setFetchMode(PDO::FETCH_ASSOC);
-// $check=mysqli_num_rows($run);
 $row = $stmt->fetchAll();
 }
 
-catch (PDOException $e)
-{
-  dd("Error: " . $e->getMessage());
+catch(PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
 }
 ?>
 
