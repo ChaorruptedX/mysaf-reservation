@@ -1,6 +1,29 @@
+a:link, a:visited {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+.bttn {
+    border: none;
+    color: white;
+    padding: 15px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+.attend{
+    background-color: green;
+}
+.cancel{
+    background-color: #f44336;
+}
 .styled-table {
     border-collapse: collapse;
-
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 400px;
