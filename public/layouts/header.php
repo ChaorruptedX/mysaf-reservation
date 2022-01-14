@@ -26,6 +26,7 @@
     <!-- Styles -->
     <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/main.css' ?>">
     <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/nav.css' ?>">
+    <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/data-tables/datatables.min.css' ?>">
     <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/login.css' ?>">
     <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/table-style.css' ?>">
     <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/form.css' ?>">
@@ -35,6 +36,7 @@
     <script src="<?= constant("BASEURL") . 'assets/js/jquery-3.6.0.min.js' ?>"></script>
     <script src="<?= constant("BASEURL") . 'assets/js/main.js' ?>"></script>
     <script src="<?= constant("BASEURL") . 'assets/js/jquery-validation/jquery.validate.min.js' ?>"></script>
+    <script src="<?= constant("BASEURL") . 'assets/js/data-tables/datatables.min.js' ?>"></script>
 </head>
 <body>
 
