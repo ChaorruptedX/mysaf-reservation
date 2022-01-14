@@ -1,3 +1,5 @@
 $(function() { // Shorthand for $( document ).ready()
-    // console.log( "ready!" );
+
+    $( "table.data-table" ).DataTable();
+
 });
