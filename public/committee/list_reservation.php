@@ -15,8 +15,9 @@ catch(PDOException $e) {
 
 <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/list_css.css' ?>">
 <body>
-<table align="center" class="styled-table">
+<table class="styled-table">
     <thead>
+        <h2 align="center">List of Reservation</h2>
         <tr>
             <th>ReserveID</th>
             <th>StaffID</th>
