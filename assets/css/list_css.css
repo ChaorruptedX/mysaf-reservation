@@ -7,7 +7,6 @@ a:link, a:visited {
 
 .bttn {
     border: none;
-    color: white;
     padding: 15px 10px;
     text-align: center;
     text-decoration: none;
@@ -18,9 +17,11 @@ a:link, a:visited {
   }
 .attend{
     background-color: green;
+    width:100;
 }
 .cancel{
     background-color: #f44336;
+    width:100;
 }
 .styled-table {
     border-collapse: collapse;
