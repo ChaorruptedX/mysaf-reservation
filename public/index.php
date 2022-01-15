@@ -1,10 +1,11 @@
 <?php require_once ('layouts/header.php'); guestSession(); ?>
 
 <?php
+    $mosque = getActiveMosque($conn);
     $reservation = getClosestReservation($conn);
 ?>
 
-<h1 class="h1 home">MASJID SAYYIDINA ABU BAKAR, UTEM</h1>
+<h1 class="h1 home"><?= $mosque['name']; ?></h1>
 
 <div class="content home">
     <h2> Announcement </h2>
