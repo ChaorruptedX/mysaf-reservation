@@ -2,11 +2,9 @@
 
 <link rel ="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/reservation.css' ?>">
 
-<div class = "wrapper">
-    <div class ="center content"><hr>
+    <div class ="content"><hr>
         <h2 name = "title">Contact Us</h2>
         <p>For all enquires,please leave us a message: </p>
-        <div class="row">
             <div class="column">
                 <img src="<?= constant("BASEURL") . 'assets/image/masjid.jpg' ?>" style="width:100%">
             </div>
@@ -30,14 +28,13 @@
                     <input type="submit" value="Submit">
                 </form>
             </div>
-        </div>
         <div class="center">
-            <h4>Connect with us through our social media ! </h4>
+            <h2> OR </h2><br><br>
+            <h3>Connect with us through our social media ! </h3>
             <p><a href="mailto:abu@gmail.com" target="_blank"><img src="<?= constant("BASEURL") . 'assets/image/gmail.png' ?>" width="60px" height="60px">   </a>
             <a href="https://twitter.com/i/flow/login"target="_blank"><img src="<?= constant("BASEURL") . 'assets/image/twitter.png' ?>" width="60px" height="60px">   </a>
             <a href="https://www.facebook.com/"target="_blank"><img src="<?= constant("BASEURL") . 'assets/image/fb.png' ?>" width="60px" height="60px"></a>   </p>    
         </div>   
     </div>
-</div>
 
 <?php require_once ('layouts/footer.php'); ?>
