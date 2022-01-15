@@ -4,22 +4,20 @@ try
 {
 $stmt = $conn->prepare("SELECT id,id_personal_detail,name,open_time,close_time,maximum_capacity,created_at,updated_at from reservation ");
 $stmt->execute();
-$run = $stmt->get_result();
 $stmt->setFetchMode(PDO::FETCH_ASSOC);
-// $check=mysqli_num_rows($run);
 $row = $stmt->fetchAll();
 }
 
-catch (PDOException $e)
-{
-  dd("Error: " . $e->getMessage());
+catch(PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
 }
 ?>
 
 <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/list_css.css' ?>">
 <body>
-<table align="center" class="styled-table">
+<table class="styled-table">
     <thead>
+        <h2 align="center">List of Reservation</h2>
         <tr>
             <th>ReserveID</th>
             <th>StaffID</th>
