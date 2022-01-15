@@ -19,6 +19,7 @@
         ON user.id_role = lookup_role.id
       WHERE
         personal_detail.deleted_at='0'
+        AND user.deleted_at='0'  
         AND user.id_role != '" . lookupRole($conn, "SA001")['id'] . "'
     ");
 
@@ -66,7 +67,7 @@
     <td><?php echo $data['email'];?></td>
     <td><?php echo $data['tel_no'];?></td>
     <td><?php echo $data['role_desc'];?></td>
-    <td align="center"><a href="update-user.php?id=<?php echo $data["id"];?>">Edit</a> || <a href="delete-user.php?id=<?php echo $data["id"];?>">Delete</a></td>
+    <td align="center"><button class="edit-user"><a href="update-user.php?id=<?php echo $data["id"];?>" class="button-action">Edit</a> </button> <button class="delete-user"><a href="delete-user.php?id=<?php echo $data["id"];?>" class="button-action">Delete</a></button></td>
   </tr>
   <?php
     }
@@ -74,3 +75,4 @@
 </table>
 
 <?php require_once ('../layouts/footer.php'); ?>
+
