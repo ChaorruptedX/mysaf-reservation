@@ -69,7 +69,7 @@ nav.sidenav .active {
 /* Style the content for side navigation bar */
 div.side-nav-content {
     margin-left: 200px;
-    padding-left: 20px;
+    padding: 20px;
 }
 
 /*---------------------------------*/

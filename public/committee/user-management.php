@@ -35,12 +35,11 @@
 ?>
 
 <div>
-    <br>
     <h1>List of Users</h1>
     <a href="<?= constant("BASEURL") . 'public/committee/register-user.php' ?>"><button class="button register-user">Register User</button></a>
 </div>
 
-<div style="width: 90%;">
+<div style="width: 100%;">
 
     <table id="user" class="data-table" style="width: 100%;">
         <thead>
