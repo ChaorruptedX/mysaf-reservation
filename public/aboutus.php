@@ -1,6 +1,5 @@
 <?php require_once ('layouts/header.php'); guestSession(); ?>
 
-
 <link rel ="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/aboutus_design.css' ?>">
 
 <div class="about-section">

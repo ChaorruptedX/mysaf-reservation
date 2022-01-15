@@ -1,4 +1,4 @@
-<?php require_once ('layouts/header.php'); guestSession(); ?>
+<?php require_once ('../layouts/header.php'); userSession(); ?>
 <?php
 try
 {
