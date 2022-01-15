@@ -86,20 +86,27 @@
     </div>
 
     <br>
-    <h2>Saf Reservation</h2>
-    <hr>
-    <div class="box-saf">
-        <div class="icon-part"><br>
-        <img src ="<?= constant("BASEURL") . 'assets/image/saf-icon.png' ?>"alt="User Icon" width="50" height="50"/><br>
-        <h3><?= $reservation['name']; ?></h3>
-        <h4> <?= getDateFormat($reservation['open_time']); ?> </h4>
-            <small>Total Reservation</small>
-            <p><?= $reservation['total_user_reserved']; ?> / <?= $reservation['maximum_capacity'] ?></p>
+
+    <?php if (!empty($reservation)) : ?>
+
+        <h2>Saf Reservation</h2>
+
+        <hr>
+        
+        <div class="box-saf">
+            <div class="icon-part"><br>
+            <img src ="<?= constant("BASEURL") . 'assets/image/saf-icon.png' ?>"alt="User Icon" width="50" height="50"/><br>
+            <h3><?= $reservation['name']; ?></h3>
+            <h4> <?= getDateFormat($reservation['open_time']); ?> </h4>
+                <small>Total Reservation</small>
+                <p><?= $reservation['total_user_reserved']; ?> / <?= $reservation['maximum_capacity'] ?></p>
+            </div>
+            <div class="card-content-saf">
+                <a href="#">More Details </a>
+            </div>
         </div>
-        <div class="card-content-saf">
-            <a href="#">More Details </a>
-        </div>
-    </div>
+
+    <?php endif; ?>
     
 </div>
 
