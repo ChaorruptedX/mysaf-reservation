@@ -31,6 +31,8 @@
     <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/table-style.css' ?>">
     <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/form.css' ?>">
     <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/dashboard.css' ?>">
+    <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/aboutus_design.css' ?>">
+    <link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/list_css.css' ?>">
 
     <!-- Scripts -->
     <script src="<?= constant("BASEURL") . 'assets/js/jquery-3.6.0.min.js' ?>"></script>
