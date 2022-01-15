@@ -18,6 +18,7 @@
                 ON user.id_role = lookup_role.id
             WHERE
                 personal_detail.deleted_at='0'
+                AND user.deleted_at='0'
                 AND user.id_role != '" . lookupRole($conn, "SA001")['id'] . "'
         ");
 
@@ -51,7 +52,6 @@
             <th>Action</th>
             </tr>
         </thead>
-
         <tbody>
             <!-- PHP CODE TO FETCH DATA FROM ROWS -->
             <?php foreach ($row as $data) : ?> <!-- LOOP TILL END OF DATA  -->
@@ -61,7 +61,7 @@
                     <td><?= $data['email']; ?></td>
                     <td><?= $data['tel_no']; ?></td>
                     <td><?= $data['role_desc']; ?></td>
-                    <td align="center"><a href="update-user.php?id=<?= $data["id"]; ?>">Edit</a> || <a href="delete-user.php?id=<?= $data["id"]; ?>">Delete</a></td>
+                    <td align="center"><button class="edit-user"><a href="update-user.php?id=<?php echo $data["id"];?>" class="button-action">Edit</a> </button> <button class="delete-user"><a href="delete-user.php?id=<?php echo $data["id"];?>" class="button-action">Delete</a></button></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
@@ -70,3 +70,4 @@
 </div>
 
 <?php require_once ('../layouts/footer.php'); ?>
+

@@ -93,3 +93,67 @@ button.register-user:active
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
+
+/* Button Edit User */
+
+
+button.edit-user 
+{
+    background-color: #009ae2; 
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 14px;
+    margin: -3px 5px;
+    cursor: pointer;
+}
+
+button.edit-user:hover 
+{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.2s;
+}
+
+button.edit-user:active 
+{
+    background-color: #016199;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
+/* Button Delete User */
+
+
+button.delete-user 
+{
+    background-color: #e24000; 
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 14px;
+    margin: -3px 5px;
+    cursor: pointer;
+}
+
+button.delete-user:hover 
+{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.2s;
+}
+
+button.delete-user:active 
+{
+    background-color: #c40000;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+a.button-action
+{
+    text-decoration: none;
+    color: white;
+}
+
