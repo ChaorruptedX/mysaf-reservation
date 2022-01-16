@@ -49,5 +49,5 @@ catch(PDOException $e) {
     }
 ?>
 </body>
-<!-- <?php require_once ('../layouts/footer.php'); ?> -->
+<?php require_once ('../layouts/footer.php'); ?>
 
