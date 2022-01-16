@@ -1,5 +1,5 @@
 <?php
-require_once ('../layouts/header.php'); // committeeSession();
+require_once ('../layouts/header.php');  committeeSession();
 try
 {
 $stmt = $conn->prepare("SELECT id,id_personal_detail,name,open_time,close_time,maximum_capacity,created_at,updated_at from reservation ");
