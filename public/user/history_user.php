@@ -43,16 +43,19 @@
     <table id="user" class="data-table">
         <thead>
             <tr>
+            <th>No.</th>
             <th>Reservation Name</th>
             <th>Reservation Date & Time</th>
             <th>Status</th>
             </tr>
         </thead>
         <tbody>
+        <?php $no=0; ?>
             <!-- PHP CODE TO FETCH DATA FROM ROWS -->
             <?php foreach ($row as $data) : ?> <!-- LOOP TILL END OF DATA  -->
                 <tr>
                     <!--FETCHING DATA FROM EACH ROW OF EVERY COLUMN-->
+                    <td><?=++$no?></td>
                     <td><?= $data['name']; ?></td>
                     <td><?= $data['created_at']; ?></td>
                     <td><?= $data['status']; ?></td>
