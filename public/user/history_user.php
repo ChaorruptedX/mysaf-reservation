@@ -1,50 +1,67 @@
 <?php require_once ('../layouts/header.php'); userSession(); ?>
-<?php
-try
-{
-$stmt = $conn->prepare("SELECT id,status from user_reservation ");
-$stmt->execute();
-$stmt->setFetchMode(PDO::FETCH_ASSOC);
-$row = $stmt->fetchAll();
-
-
-}
-catch(PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
-?>
-<link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/list_css.css' ?>">
-<body>
-<table class="styled-table">
-    <thead>
-        <h2 align="center">List of Reservation</h2>
-        <tr>
-            <th>ID</th>
-            <th>Status</th>
-        </tr>
-    </thead>
-    <?php
-    foreach($row as $rows)
+<?php 
+    try 
     {
-    ?>
+        $stmt = $conn->prepare("
 
-    <tbody>       
-        <tr>
-            <td><?php echo $rows['id'];?></td>
-            <td>
-            <?php
-            if($rows['status']==1){
-                echo '<button class =" bttn attend"><a href="status.php?id=' .$rows['id'].'&status=0">Attend</a></button>';
-            }else{
-                echo '<button class = "bttn cancel"><a href="status.php?id='.$rows['id'].'&status=1">Canceled</a></button>'; 
-            }
-            ?>
-            </td>
-        </tr>
-    </tbody>
-<?php
+        SELECT
+        *
+        FROM user_reservation
+        LEFT JOIN personal_detail
+          ON user_reservation.id_personal_detail = personal_detail.id
+        LEFT JOIN user
+          ON personal_detail.id_user = user.id
+        LEFT JOIN reservation
+          ON user_reservation.id_reservation = reservation.id
+        WHERE
+         user.id='" . $_SESSION['id_user'] . "'
+    ");
+
+          $stmt->execute();
+
+          // Set the Resulting Array to Associative
+          $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+          $row = $stmt->fetchAll();
+
+          //dd($row);
     }
-
+    catch (PDOException $e)
+    {
+        dd("Error: " . $e->getMessage());
+    }
 ?>
-</body>
+<br>
+<div>
+    <h1>My Reservation History</h1>
+</div>
+<br>
+
+<div class="wrapper form">
+<div style="width: 100%;">
+
+    <table id="user" class="data-table">
+        <thead>
+            <tr>
+            <th>Reservation Name</th>
+            <th>Reservation Date & Time</th>
+            <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- PHP CODE TO FETCH DATA FROM ROWS -->
+            <?php foreach ($row as $data) : ?> <!-- LOOP TILL END OF DATA  -->
+                <tr>
+                    <!--FETCHING DATA FROM EACH ROW OF EVERY COLUMN-->
+                    <td><?= $data['name']; ?></td>
+                    <td><?= $data['created_at']; ?></td>
+                    <td><?= $data['status']; ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+
+</div>
+
+</div>
 <?php require_once ('../layouts/footer.php'); ?>
