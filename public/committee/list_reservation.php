@@ -13,7 +13,6 @@ catch(PDOException $e) {
 }
 ?>
 
-<link rel="stylesheet" type="text/css" href="<?= constant("BASEURL") . 'assets/css/list_css.css' ?>">
 <body>
 <table class="styled-table">
     <thead>
@@ -21,12 +20,12 @@ catch(PDOException $e) {
         <tr>
             <th>ReserveID</th>
             <th>StaffID</th>
-            <th>Mosque Name</th>
+            <th>Mosque</th>
             <th>Date open </th>
             <th>Date close</th>
-            <th>Maximum Capacity</th>
-            <th>Created on</th>
-            <th>Last Updated on</th>
+            <th>Max Capacity</th>
+            <th>Created</th>
+            <th>Last Updated</th>
         </tr>
     </thead>
     <?php
