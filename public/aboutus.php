@@ -14,11 +14,13 @@
     <div class="card">
     <img src="<?= constant("BASEURL") . 'assets/image/zaki.jpg' ?>" alt="zaki" style="width:100%">
       <div class="container">
-        <h3>Ameerul Zaki Bin Azlan Raous</h3>
+        <h5>Ameerul Zaki Bin Azlan Raous</h5>
         <p class="title">CEO & Founder</p>
         <p>B031910250</p>
-        <p><a href="mailto:zaki@gmail.com">zaki@gmail.com</a></p>
-        <p><button class="button">Contact</button></p>
+        <p>zaki@gmail.com</p>
+        <form style align="center" action="mailto:abu@gmail.com" target="_blank">
+          <input type="submit" value="Contact" />
+        </form>
       </div>
     </div>
   </div>
@@ -27,11 +29,13 @@
     <div class="card">
     <img class  src="<?= constant("BASEURL") . 'assets/image/acap.jpg' ?>" alt="acap" style="width:100%">
       <div class="container">
-        <h3>Mohd Asyraf Bin Mohamed Hanif</h3>
+        <h5>Mohd Asyraf Bin Mohamed Hanif</h5>
         <p class="title">Art Director</p>
         <p>B031910195</p>
-        <p><a href="mailto:acap@gmail.com">acap@gmail.com</a></p>
-        <p><button class="button">Contact</button></p>
+        <p>acap@gmail.com</p>
+        <form style align="center" action="mailto:abu@gmail.com" target="_blank">
+          <input type="submit" value="Contact" />
+        </form>
       </div>
     </div>
   </div>
@@ -40,11 +44,13 @@
     <div class="card">
     <img src="<?= constant("BASEURL") . 'assets/image/abu.jpg' ?>" alt="abu" style="width:100%">
       <div class="container">
-        <h3>Abu Dzar Bin Adam</h3>
+        <h5>Abu Dzar Bin Adam</h5>
         <p class="title">Designer</p>
         <p>B031910163</p>
-        <p><a href="mailto:abu@gmail.com">abu@gmail.com</a></p>
-        <p><button class="button">Contact</button></p>
+        <p>abu@gmail.com</p>
+        <form style align="center" action="mailto:abu@gmail.com" target="_blank">
+          <input type="submit" value="Contact" />
+        </form>
       </div>
     </div>
   </div>

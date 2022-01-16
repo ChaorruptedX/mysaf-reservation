@@ -43,14 +43,15 @@ body {
   .title {
     color: grey;
   }
+
+  input[type=submit]{
+    background-color: lightgreen;
+    padding: 10px 18px;
+    border: none;
+    cursor: pointer;
+}
   
-  .button {
-    color: white;
-    background-color: #000;
-    text-align: center;
-  }
-  
-  .button:hover {
-    background-color: #555;
-  }
+input[type=submit]:hover {
+    background-color: green;
+}
  
