@@ -1,4 +1,6 @@
 <?php require_once ('../layouts/header.php'); userSession(); ?>
+
+<br>
 <div>
     <h1>My Account</h1>
 </div>
