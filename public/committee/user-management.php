@@ -45,6 +45,7 @@
     <table id="user" class="data-table" style="width: 100%;">
         <thead>
             <tr>
+            <th>No.</th>
             <th>Name</th>
             <th>Email</th>
             <th>Phone Number</th>
@@ -53,10 +54,12 @@
             </tr>
         </thead>
         <tbody>
+            <?php $no=0; ?>
             <!-- PHP CODE TO FETCH DATA FROM ROWS -->
             <?php foreach ($row as $data) : ?> <!-- LOOP TILL END OF DATA  -->
                 <tr>
                     <!--FETCHING DATA FROM EACH ROW OF EVERY COLUMN-->
+                    <td><?=++$no?></td>
                     <td><?= $data['name']; ?></td>
                     <td><?= $data['email']; ?></td>
                     <td><?= $data['tel_no']; ?></td>
