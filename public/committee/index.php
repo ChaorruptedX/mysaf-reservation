@@ -102,7 +102,7 @@
                 <p><?= $reservation['total_user_reserved']; ?> / <?= $reservation['maximum_capacity'] ?></p>
             </div>
             <div class="card-content-saf">
-                <a href="#">More Details </a>
+                <a href="<?= constant("BASEURL") . 'public/committee/list_reservation.php' ?>">More Details </a>
             </div>
         </div>
 
