@@ -38,6 +38,42 @@
     }
 
     /**
+     * Check for Existing User Reservation
+     */
+    function checkExistingUserReservation($conn, $id_personal_detail, $id_reservation)
+    {
+        try {
+            // Check Existing User Reservation
+            $stmt = $conn->prepare("
+                SELECT
+                    *
+                FROM user_reservation
+                WHERE
+                    id_personal_detail = '" . $id_personal_detail . "'
+                    AND id_reservation = '" . $id_reservation . "'
+                    AND status = 1
+                    AND deleted_at = '0'
+            ");
+
+            $stmt->execute();
+
+            // Set the Resulting Array to Associative
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+            $row = $stmt->fetch();
+        }
+        catch (PDOException $e)
+        {
+            dd("Error: " . $e->getMessage());
+        }
+
+        if ($row)
+            return true;
+        else
+            return false;
+    }
+
+    /**
      * Debug function
      * d($var);
      */
@@ -104,6 +140,7 @@
         {
             $stmt = $conn->prepare("
                 SELECT
+                    reservation.id,
                     name,
                     open_time,
                     close_time,
@@ -114,7 +151,7 @@
                     ON reservation.id = user_reservation.id_reservation
                 WHERE
                     close_time >= '" . getCurrentDateTime() . "'
-                    AND reservation.deleted_at = '0'
+                    AND user_reservation.deleted_at = '0'
                 GROUP BY
                     reservation.id
             ");
