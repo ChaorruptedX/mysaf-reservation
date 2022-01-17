@@ -64,7 +64,7 @@
 
         <hr>
 
-        <h3> Resrvation for <?= $reservation['name']; ?> on <?= getDateFormat($reservation['open_time']); ?> </h3>
+        <h3> Reservation for <?= $reservation['name']; ?> on <?= getDateFormat($reservation['open_time']); ?> </h3>
 
         <div class="box-saf">
             
