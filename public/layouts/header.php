@@ -39,6 +39,7 @@
     <script src="<?= constant("BASEURL") . 'assets/js/main.js' ?>"></script>
     <script src="<?= constant("BASEURL") . 'assets/js/jquery-validation/jquery.validate.min.js' ?>"></script>
     <script src="<?= constant("BASEURL") . 'assets/js/data-tables/datatables.min.js' ?>"></script>
+    <script src="<?= constant("BASEURL") . 'assets/js/sweet-alert-2/sweetalert2.all.min.js' ?>"></script>
 </head>
 <body>
 
