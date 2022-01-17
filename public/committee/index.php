@@ -85,7 +85,7 @@
         </div>
     </div>
 
-    <br>
+    <br><br>
 
     <?php if (!empty($reservation)) : ?>
 
