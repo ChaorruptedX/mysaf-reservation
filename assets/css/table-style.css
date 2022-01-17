@@ -54,6 +54,11 @@ button.home-reserve:hover
 {
     background-color: #f2f2f2;
 }
+
+#user tr:nth-child(odd)
+{
+    background-color: #ffffff;
+}
   
 #user tr:hover {
     background-color: #ddd;
