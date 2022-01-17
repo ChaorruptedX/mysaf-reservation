@@ -58,8 +58,17 @@
                     <td><?=++$no?></td>
                     <td><?= $data['name']; ?></td>
                     <td><?= $data['created_at']; ?></td>
-                    <td><?= $data['status']; ?></td>
-                </tr>
+                    <td>
+                        <?php
+                            if (($data['status']) == '0') :
+                                echo '<p style="color: red; text-align: center" >
+                                <b> Cancelled</b> </p>';
+                            elseif (($data['status']) == '1') :
+                                echo '<p style="color: blue; text-align: center" >
+                               <b> Reserved</b> </p>';
+                            endif;
+                        ?></td>
+                    </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
