@@ -14,40 +14,36 @@ catch(PDOException $e) {
 ?>
 
 <body>
-<table class="styled-table">
+<table class="styled-table data-table">
     <thead>
         <h2 align="center">List of Reservation</h2>
         <tr>
-            <th>ReserveID</th>
-            <th>StaffID</th>
-            <th>Mosque</th>
+            <th>No.</th>
+            <th>Reservation Name</th>
             <th>Date open </th>
             <th>Date close</th>
             <th>Max Capacity</th>
-            <th>Created</th>
-            <th>Last Updated</th>
         </tr>
     </thead>
+    <tbody>  
     <?php
-    foreach($row as $rows)
+    foreach($row as $key => $rows)
     {
     ?>
 
-    <tbody>       
+         
         <tr>
-            <td><?php echo $rows['id'];?></td>
-            <td><?php echo $rows['id_personal_detail'];?></td>
+            <td><?= isset($key) ? ++$key : $key = 1; ?></td>
             <td><?php echo $rows['name'];?></td>
             <td><?php echo $rows['open_time'];?></td>
             <td><?php echo $rows['close_time'];?></td>
             <td><?php echo $rows['maximum_capacity'];?></td>
-            <td><?php echo $rows['created_at'];?></td>
-            <td><?php echo $rows['updated_at'];?></td>
         </tr>
-    </tbody>
+    
 <?php
     }
 ?>
+</tbody>
 </body>
 <?php require_once ('../layouts/footer.php'); ?>
 
