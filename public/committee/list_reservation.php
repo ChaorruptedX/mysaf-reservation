@@ -5,20 +5,22 @@
     {
         $stmt = $conn->prepare("
             SELECT
-                id,
-                id_personal_detail,
+                reservation.id,
                 name,
                 open_time,
                 close_time,
                 maximum_capacity,
-                created_at,
-                updated_at
+                COUNT(user_reservation.id) AS user_reserved
             FROM reservation
+            LEFT JOIN user_reservation
+                ON reservation.id = user_reservation.id_reservation AND user_reservation.status = '1' AND user_reservation.deleted_at = '0'
             WHERE
-                deleted_at = '0'
+                reservation.deleted_at = '0'
+            GROUP BY
+                reservation.id
             ORDER BY
-                created_at DESC
-            ");
+                reservation.created_at DESC
+        ");
         $stmt->execute();
 
         $stmt->setFetchMode(PDO::FETCH_ASSOC);
@@ -54,13 +56,13 @@
         <tr>
             <td><?= isset($key) ? ++$key : $key = 1; ?></td>
             <td id="reservation-name"><?php echo $rows['name'];?></td>
-            <td><?php echo $rows['open_time'];?></td>
-            <td><?php echo $rows['close_time'];?></td>
-            <td><?php echo $rows['maximum_capacity'];?></td>
+            <td><?php echo getFullDateTimeFormat($rows['open_time']);?></td>
+            <td><?php echo getFullDateTimeFormat($rows['close_time']);?></td>
+            <td><?php echo $rows['user_reserved'] ." / ". $rows['maximum_capacity'];?></td>
             <td align="center">
-                <button class="edit-user"><a href="update-reservation.php" class="button-action">Edit</a></button> 
-                <button class="delete-user"><a id="remove-reservation-link" href="delete-reservation.php?id=<?php echo $rows["id"];?>" class="button-action">Delete</a></button>
-                <button class="view-reservation"><a id="" href="view-reservation-list.php" class="button-action">View</a></button>
+                <a href="view-reservation-list.php?id=<?php echo $rows["id"];?>" class="button-action"><button class="view-reservation">View</button></a>
+                <a href="update-reservation.php?id=<?php echo $rows["id"];?>" class="button-action"><button class="edit-user">Edit</button></a>
+                <a id="remove-reservation-link" href="delete-reservation.php?id=<?php echo $rows["id"];?>" class="button-action"><button class="delete-user">Delete</button></a>
             </td>
         </tr>
     
@@ -76,10 +78,10 @@ $(function() { // Shorthand for $( document ).ready()
 
     $(document).on("click", "button.delete-user", function(event) {
 
-        let reservation_name = $(this).parent().siblings("td#reservation-name").html();
-        let remove_reservation_link = $(this).children("a#remove-reservation-link").attr("href");
-        console.log(reservation_name);
         event.preventDefault();
+
+        let reservation_name = $(this).parent().parent().siblings("td#reservation-name").html();
+        let remove_reservation_link = $(this).parent("a#remove-reservation-link").attr("href");
 
         Swal.fire({
             title: 'Remove Reservation',

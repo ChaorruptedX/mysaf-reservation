@@ -15,8 +15,6 @@
             
             // Set the Resulting Array to Associative
             $stmt->setFetchMode(PDO::FETCH_ASSOC);
-
-            $success_registration_message = true;
     }
     catch (PDOException $e)
     {
