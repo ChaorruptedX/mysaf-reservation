@@ -3,19 +3,21 @@
     try 
     {
         $stmt = $conn->prepare("
-
-        SELECT
-        *
-        FROM user_reservation
-        LEFT JOIN personal_detail
-          ON user_reservation.id_personal_detail = personal_detail.id
-        LEFT JOIN user
-          ON personal_detail.id_user = user.id
-        LEFT JOIN reservation
-          ON user_reservation.id_reservation = reservation.id
-        WHERE
-         user.id='" . $_SESSION['id_user'] . "'
-    ");
+            SELECT
+                *
+            FROM user_reservation
+            LEFT JOIN personal_detail
+                ON user_reservation.id_personal_detail = personal_detail.id
+            LEFT JOIN user
+                ON personal_detail.id_user = user.id
+            LEFT JOIN reservation
+                ON user_reservation.id_reservation = reservation.id
+            WHERE
+                user.id = '" . $_SESSION['id_user'] . "'
+                AND user_reservation.deleted_at = '0'
+            ORDER BY
+                user_reservation.created_at DESC
+        ");
 
           $stmt->execute();
 
@@ -23,8 +25,6 @@
           $stmt->setFetchMode(PDO::FETCH_ASSOC);
 
           $row = $stmt->fetchAll();
-
-          //dd($row);
     }
     catch (PDOException $e)
     {
