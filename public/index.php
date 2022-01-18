@@ -21,14 +21,14 @@
         <h2> <?= $reservation['name']; ?> Reservation</h2>
 
         <table id="user">
-            <tr>
+            <tr style="background: rgba(76, 175, 80, 0)">
                 <td colspan="2"><h3><?= getDateFormat($reservation['open_time']); ?></h3></td>
             </tr>
             <tr>
                 <th>Open</th>
                 <th>Close</th>
             </tr>
-            <tr>
+            <tr >
                 <td><?= getFullDateTimeFormat($reservation['open_time']); ?></td> <!-- e.g Thursday : 10:00 AM -->
                 <td><?= getFullDateTimeFormat($reservation['close_time']); ?></td> <!-- e.g Friday : 10:00 AM -->
             </tr>
