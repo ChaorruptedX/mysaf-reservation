@@ -59,7 +59,7 @@
             <td><?php echo $rows['maximum_capacity'];?></td>
             <td align="center">
                 <button class="edit-user"><a href="update-reservation.php" class="button-action">Edit</a></button> 
-                <button class="delete-user"><a id="remove-user-link" href="delete-reservation.php?id=<?php echo $rows["id"];?>" class="button-action">Delete</a></button>
+                <button class="delete-user"><a id="remove-reservation-link" href="delete-reservation.php?id=<?php echo $rows["id"];?>" class="button-action">Delete</a></button>
                 <button class="view-reservation"><a id="" href="view-reservation-list.php" class="button-action">View</a></button>
             </td>
         </tr>
