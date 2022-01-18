@@ -148,10 +148,9 @@
                     COUNT(user_reservation.id) AS total_user_reserved
                 FROM reservation
                 LEFT JOIN user_reservation
-                    ON reservation.id = user_reservation.id_reservation
+                    ON reservation.id = user_reservation.id_reservation AND user_reservation.status = '1' AND user_reservation.deleted_at = '0'
                 WHERE
                     close_time >= '" . getCurrentDateTime() . "'
-                    AND user_reservation.deleted_at = '0'
                 GROUP BY
                     reservation.id
             ");
