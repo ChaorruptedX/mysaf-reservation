@@ -1,16 +1,34 @@
-<?php
-require_once ('../layouts/header.php');  committeeSession();
-try
-{
-$stmt = $conn->prepare("SELECT id,id_personal_detail,name,open_time,close_time,maximum_capacity,created_at,updated_at from reservation ");
-$stmt->execute();
-$stmt->setFetchMode(PDO::FETCH_ASSOC);
-$row = $stmt->fetchAll();
-}
+<?php require_once ('../layouts/header.php');  committeeSession(); ?>
 
-catch(PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
+<?php
+    try
+    {
+        $stmt = $conn->prepare("
+            SELECT
+                id,
+                id_personal_detail,
+                name,
+                open_time,
+                close_time,
+                maximum_capacity,
+                created_at,
+                updated_at
+            FROM reservation
+            WHERE
+                deleted_at = '0'
+            ORDER BY
+                created_at DESC
+            ");
+        $stmt->execute();
+
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+        $row = $stmt->fetchAll();
+    }
+    catch(PDOException $e)
+    {
+        dd("Error: " . $e->getMessage());
+    }
 ?>
 
 <body>
