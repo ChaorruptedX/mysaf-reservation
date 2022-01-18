@@ -64,13 +64,42 @@
                     <td><?= $data['email']; ?></td>
                     <td><?= $data['tel_no']; ?></td>
                     <td><?= $data['role_desc']; ?></td>
-                    <td align="center"><button class="edit-user"><a href="update-user.php?id=<?php echo $data["id"];?>" class="button-action">Edit</a> </button> <button class="delete-user"><a href="delete-user.php?id=<?php echo $data["id"];?>" class="button-action">Delete</a></button></td>
+                    <td align="center"><button class="edit-user"><a href="update-user.php?id=<?php echo $data["id"];?>" class="button-action">Edit</a> </button> <button class="delete-user"><a id="remove-user-link" href="delete-user.php?id=<?php echo $data["id"];?>" class="button-action">Delete</a></button></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
 
 </div>
+
+<script type="text/javascript">
+
+$(function() { // Shorthand for $( document ).ready()
+
+    $(document).on("click", "button.delete-user", function(event) {
+
+        let remove_user_link = $(this).children("a#remove-user-link").attr("href");
+
+        event.preventDefault();
+
+        Swal.fire({
+            title: 'Remove User',
+            text: "Are you sure to remove the selected user?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes'
+        }).then((result) => {
+            if (result.isConfirmed)
+                $(location).attr('href', remove_user_link);
+        })
+
+    });
+
+});
+
+</script>
 
 <?php require_once ('../layouts/footer.php'); ?>
 
