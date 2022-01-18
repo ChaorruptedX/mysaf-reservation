@@ -106,7 +106,7 @@
 <form method="post" action="update-account.php">
     <?php if ($success_registration_message === true) : ?>
         <div style="text-align: center; margin-bottom: 15px">
-            <label class="validation-success">Your registration has been successfully completed.</label>
+            <label class="validation-success">Your account has been updated successfully.</label>
         </div>
     <?php endif; ?>
     <?php if ($unique_email_validation === false) : ?>
