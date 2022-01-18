@@ -4,6 +4,33 @@
     $mosque = getActiveMosque($conn);
     $reservation = getClosestReservation($conn);
     $user_reservation_exist = checkExistingUserReservation($conn, getPersonalDetailbyIdUser($conn, $_SESSION['id_user'])['id'], $reservation['id']);
+    $success_cancel_reserveation_message = false;
+
+    if ($_POST)
+    {
+        try // Cancel Reservation
+        {  
+            // Prepare SQL and Bind Parameters
+            $stmt = $conn->prepare("
+                UPDATE user_reservation
+                SET
+                    status = 0
+                WHERE
+                    id_personal_detail = '" . getPersonalDetailbyIdUser($conn, $_SESSION['id_user'])['id'] . "'
+                    AND id_reservation = '" . $_POST['id_reservation'] . "'
+                    AND deleted_at = '0'
+            ");
+
+            $stmt->execute();
+
+            $user_reservation_exist = checkExistingUserReservation($conn, getPersonalDetailbyIdUser($conn, $_SESSION['id_user'])['id'], $reservation['id']);
+            $success_cancel_reserveation_message = true;
+        }
+        catch (PDOException $e)
+        {
+            dd("Error: " . $e->getMessage());
+        }
+    }
 ?>
 
 <br>
@@ -35,7 +62,10 @@
         </table>
         <br>
         <div>
-            <a href=""><button class="form back">Cancel Reservation</button></a>
+            <form id="form-reserved" method="post">
+                <input type="hidden" name="id_reservation" value="<?= $reservation['id'] ?>">
+                <button id="cancel-reservation" class="form back">Cancel Reservation</button>
+            </form>
         </div>
 
     <?php else : ?>
@@ -47,5 +77,43 @@
     <?php endif; ?>
         
 </div>
+
+<script type="text/javascript">
+
+$(function() { // Shorthand for $( document ).ready()
+
+    let success_cancel_reserveation_message = '<?= json_encode($success_cancel_reserveation_message); ?>';
+
+    if (success_cancel_reserveation_message == "true")
+    {
+        Swal.fire({
+            icon: 'success',
+            title: 'Reservation Cancellation Success',
+            text: 'You have cancelled a reservation.',
+        });
+    }
+
+    $(document).on("click", "button#cancel-reservation", function(event) {
+
+        event.preventDefault();
+
+        Swal.fire({
+            title: 'Cancel Reservation',
+            text: "Are you sure to cancel your reservation?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes'
+        }).then((result) => {
+            if (result.isConfirmed)
+                $("form#form-reserved").submit();
+        })
+
+    });
+
+});
+
+</script>
 
 <?php require_once ('../layouts/footer.php'); ?>
