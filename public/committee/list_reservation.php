@@ -58,7 +58,7 @@
             <td><?php echo $rows['close_time'];?></td>
             <td><?php echo $rows['maximum_capacity'];?></td>
             <td align="center">
-                <button class="edit-user"><a href="update-user.php?id=<?php echo $data["id"];?>" class="button-action">Edit</a></button> 
+                <button class="edit-user"><a href="update-reservation.php" class="button-action">Edit</a></button> 
                 <button class="delete-user"><a id="remove-user-link" href="delete-user.php?id=<?php echo $data["id"];?>" class="button-action">Delete</a></button>
                 <button class="view-reservation"><a id="" href="view-reservation-list.php" class="button-action">View</a></button>
             </td>
