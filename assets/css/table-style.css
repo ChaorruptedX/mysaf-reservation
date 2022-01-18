@@ -177,3 +177,32 @@ a.button-action
     color: white;
 }
 
+/* Button View reservation */
+
+
+button.view-reservation
+{
+    background-color: #03c73e; 
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 14px;
+    margin: -3px 5px;
+    cursor: pointer;
+}
+
+button.view-reservation:hover 
+{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    transition-duration: 0.2s;
+}
+
+button.view-reservation:active 
+{
+    background-color: #03c73e; 
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+
