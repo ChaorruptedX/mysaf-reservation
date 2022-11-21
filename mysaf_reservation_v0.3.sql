@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `mysaf_reservation`
 --
-CREATE DATABASE IF NOT EXISTS `mysaf_reservation` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+CREATE DATABASE IF NOT EXISTS `mysaf_reservation` DEFAULT CHARACTER SET utf8mb4;
 USE `mysaf_reservation`;
 
 -- --------------------------------------------------------
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `lookup_role` (
   `deleted_at` int NOT NULL DEFAULT '0' COMMENT 'Unix Timestamp',
   PRIMARY KEY (`id`),
   UNIQUE KEY `uk-lookup_role-code` (`code`,`deleted_at`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='List of Role';
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COMMENT='List of Role';
 
 --
 -- RELATIONSHIPS FOR TABLE `lookup_role`:
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `mosque` (
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `deleted_at` int NOT NULL DEFAULT '0' COMMENT 'Unix Timestamp',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Mosque Detail';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='Mosque Detail';
 
 --
 -- RELATIONSHIPS FOR TABLE `mosque`:
@@ -103,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `personal_detail` (
   `deleted_at` int NOT NULL DEFAULT '0' COMMENT 'Unix Timestamp',
   PRIMARY KEY (`id`),
   KEY `fk-personal_detail-id_user` (`id_user`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='User Personal Detail';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='User Personal Detail';
 
 --
 -- RELATIONSHIPS FOR TABLE `personal_detail`:
@@ -130,7 +130,7 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `id` int NOT NULL AUTO_INCREMENT,
   `id_personal_detail` int NOT NULL COMMENT 'System Administrator or Mosque Committee',
   `id_mosque` int NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 NOT NULL,
   `open_time` datetime NOT NULL,
   `close_time` datetime NOT NULL,
   `maximum_capacity` int NOT NULL,
@@ -140,7 +140,7 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   PRIMARY KEY (`id`),
   KEY `fk-reservation-id_personal_detail` (`id_personal_detail`),
   KEY `fk-reservation-id_mosque` (`id_mosque`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Event Created by System Administrator or Mosque Committe for User Reservation';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Event Created by System Administrator or Mosque Committe for User Reservation';
 
 --
 -- RELATIONSHIPS FOR TABLE `reservation`:
@@ -163,14 +163,14 @@ CREATE TABLE IF NOT EXISTS `user` (
   `id` int NOT NULL AUTO_INCREMENT,
   `id_role` int NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` char(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL COMMENT 'bcrypt Hashing',
+  `password` char(60) CHARACTER SET utf8mb4 NOT NULL COMMENT 'bcrypt Hashing',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `deleted_at` int NOT NULL DEFAULT '0' COMMENT 'Unix Timestamp',
   PRIMARY KEY (`id`),
   UNIQUE KEY `uk-user-email` (`email`,`deleted_at`),
   KEY `fk-user-id_role` (`id_role`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='User Authentication';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COMMENT='User Authentication';
 
 --
 -- RELATIONSHIPS FOR TABLE `user`:
@@ -204,7 +204,7 @@ CREATE TABLE IF NOT EXISTS `user_reservation` (
   PRIMARY KEY (`id`),
   KEY `fk-user_reservation-id_personal_detail` (`id_personal_detail`),
   KEY `fk-user_reservation-id_reservation` (`id_reservation`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Reservation Made by the User';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='Reservation Made by the User';
 
 --
 -- RELATIONSHIPS FOR TABLE `user_reservation`:
